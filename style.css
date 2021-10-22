@@ -1,0 +1,382 @@
+/* ***********defaults********/
+
+nav,header,footer{   /* take the nav header and footer element and display it in the form of blocks*/
+
+    display:block;
+}
+
+body{
+    line-height: 1;
+    margin:0;    /*to set everything at the edge*/
+}
+
+label{
+    font-size:35px;
+    font-weight:600;
+}
+p{
+    font-size: larger;
+    line-height: 1.2;
+}
+/*section 4*/
+
+article p{
+    font-size:35px;
+    padding:10px;  /* we are using padding bcoz it will keep the para in the same area i.e in the size
+                     of the given column as margin will push the content to the right hence violate the size 
+                     of col-7*/
+}
+
+/*Gradient*/
+.container{
+    width: 100%;
+    margin:auto;
+    padding-left: 4%;  /*to separate the sections*/
+    padding-bottom: 4%;
+}    
+
+
+.row{            
+    width:100%;
+    display:flex;   /*it is able to latch on to and grab elements that we put inside of our row and help them to
+                       make changes size now*/
+    flex-wrap: wrap;    /*  when row is flexing it wants all its content to take up and wrap around*/
+     align-items:center;   /*when row is flexing it will set all the items in the center i.e we want to start fresh 
+                               everytime*/
+
+
+                    }
+
+
+    .row::after{
+        display: table;  /*it will del all the floats in the row and will add the new row elements in the next row*/
+
+        clear:both;
+        content:"";  /*it fills up the space bt the navbar row and the blue background*/
+    }  
+    
+.col-1{width:8.33%}
+.col-2{width: 16.66%}
+.col-3{width:25%}
+.col-4{width:33.33%;}
+.col-5{width:41.66%}
+.col-6{width:50%}
+.col-7{width:58.333%}
+.col-8{width:66.66%}
+.col-9{width:75%}
+.col-10{width:83.33%}
+.col-11{width:91.66%}
+.col-12{width:100%}
+
+/*2*/
+*{
+    box-sizing:border-Box;
+}
+
+
+
+/* #######################   Nav Bar ################## */
+
+nav{
+    width:100%;  /* to take the entire width of the device*/
+    margin:0;   /*edge to edge*/
+
+}
+
+nav ul{
+    background-color: #eee;
+    overflow:hidden;  /* to avoid scrolling side to side for mobile web page*/
+    margin: 0;     /*edge to edge*/
+    padding:0;
+
+}
+nav ul li{
+    list-style:none;
+}
+ul.topnav li{   /*grabbing the parent element*/
+    list-style:none;
+    float: left ;  /* single align everything*/
+}
+
+ul.topnav li.topnav-right{   /*grabbig the child element*/
+    
+    float: right ;  /* single align everything*/
+}
+ul.topnav li a{
+    display:block;
+    
+   text-decoration: none;
+   min-height:16px;
+   text-align: center;
+   padding:14px;
+   text-transform:uppercase;
+   color: #666;
+
+
+}
+ul.topnav li a:hover /*i.e when we we will place the pointr on a particular
+navbar then it will be changed according to the styling provided by us*/
+{
+    background-color: blue;
+    color:white;
+
+}
+/* to hide dropdownicon*/
+
+ul.topnav li.dropdownicon{
+    display:none;
+}
+
+
+/* ############ CUSTOM STYLES##############*/
+
+ /*gradients are different from just the standard backgrn*/
+   #section-1-gradient{ 
+background: #076DFF;
+background: -webkit-linear-gradient(#076DFF,#65a5ff);
+background: -o-linear-gradient(#076DFF,#65a5ff);
+background: -moz-linear-gradient(#076DFF,#65a5ff);
+background: linear-gradient(#076DFF,#65a5ff);
+}
+/*2*/
+div.box{
+    text-align:center;
+    margin:24px;
+    border-radius: 7px;
+    padding:36px 24px 40px 20px;
+    background-color:#ffff;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15),
+     0 2px 3px 0 rgba(0,0,0,.1); 
+
+
+
+    /*horizontal shadow length,vertical shadow length,blur radius-blurr
+ area  around the box,spread radius-a thin line around the box*/
+  /*rgba is used for the color selection and the last parameter is that which allows
+     for an opacity to our color*/
+}
+/*section-4*/
+
+div.slopeIcon img{
+    display:block;
+    margin: auto;
+    box-shadow: -2px/*horizontal*/ -2px/*vert*/ 10px/*blurr*/  20px/*spread*/
+    rgba(0   /*shadow*/   , 0    /*backgrnd clr*/, 0   /*box clr*/, .15  /*opacity*/)
+    ,2px 2px  17px 2px rgba(0,0,0,.1);
+
+
+
+    /* positive numbers goes right and down and negative
+    numbers goes left and up*/
+
+}
+
+
+
+
+/*section3*/
+button{
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffff;
+    background-color: #076DFF;
+    padding: 15px 16px;  /*top and right then bottom and left*/
+    display: block;
+   text-align: center;
+   margin:5px;
+   border-radius: 7px;
+}
+button.learn{
+    display: block;
+    margin: auto;  /*it devides space evenly to each side of the elements*/
+}
+
+
+div.icon{
+    width:100%;
+
+}
+
+
+div.leftSide-col{
+    margin-left:5%;
+}
+div.rightSide-col{
+    margin-left:15%;
+   
+}
+h1.large{
+    color:#ffff;
+    font-size:56px;
+    margin:0px;
+    
+    line-height:60px;    /* using line height instead of using margin*/
+
+} 
+/*2*/
+h1.section2Header{
+    font-size:65px;
+    text-align:center;    
+    
+}
+
+
+
+form h2{
+    color:white;
+}
+
+input[type="text"]{
+    font-size:20px;
+    width:400px;
+    padding: 5px;  /*space btw "username" and the input field ,same with password)*/
+    min-width:100px;  /*no matter what happens we want the size of the field not decrease less than 100px*/
+     border-radius:7px;
+
+}
+/*section-5*/
+footer.footsy{
+    background-color: #666;
+    /*margin: 10%; *//*wont work*/
+    padding-left:10%;
+}
+
+footer.footsy h1{
+    color: #ffff;
+    font-size: 35px;
+    
+}
+footer.footsy ul{
+    list-style: none;
+    text-align: left;
+    padding-left:0;
+}
+footer.footsy ul{
+    color:#fff;
+    font-size:22px;
+    line-height: 1.5;
+}
+
+
+/*---------------------------------------------------------------------------*/
+
+
+
+
+
+
+/*######### MOBILE #############*/
+ /*@media screen and (max-width:680px)   */         /*f a screen is reduced to 680px then every li element disappers*/
+ /*      {
+    ul.topnav li{                     
+        display:none;}
+       }      */
+
+
+@media screen and (max-width:680px)      /*if a screen is reduced to 680px then every li element disappers*/
+{                                       
+    
+    
+    /*all accept home i.e first element remains on the screen when we switch to mobile display*/
+    ul.topnav li:not(:nth-child(1)){                     
+        display:none;
+}
+
+
+
+ul.topnav li.dropdownicon{
+    display:block;
+    float:right;
+}
+
+/* important note *?
+/*dont use ids to do the styling using css  ,always use class.We have ids to interact with javascript and 
+we use # before performing the styling on ids but refrain from doing that*/
+ul.topnav.responsive li.dropdownicon{    
+    position:absolute;
+    top:0;
+    right:0;
+    /* we dont want the dropdown menu to go down along when the list is displayed,we just want it to be 
+in the top right cornew i.e the place where it was*/
+}
+
+ul.topnav.responsive{
+    position:relative;   /* so that when button is hit the navbar doesnt move and so that unordered list is not moving around and looking wiered*/
+
+}
+ul.topnav.responsive li{
+    display:inline;
+    float:none;    /*so that when the button is hit nothing will float around*/
+}
+ul.topnav.responsive li a{  /*designing when menu icon is pressed*/
+    display:block;
+    text-align:left;
+
+}
+h1.section2Header{
+    font-size:55px;
+}
+
+.col-6,.col-4{
+    width:100%;
+    margin:0px;
+
+    
+}
+div.box{
+    padding:5px;
+    display:block;  /*to adjust the spacing btw blocks*/
+}
+
+
+div.leftSide-col,div.rightSide-col{
+    margin:15px;
+}
+input[type="text"]{
+    width:350px; /*to change the width of the text field when suze 
+                of the screen gets reduced*/
+}
+.videocontainer iframe{
+    position: relative;
+    Width:100%;
+    margin:0;
+    overflow: hidden;
+}
+
+/*section-4*/
+article p{
+    font-size:25px;
+}
+.col-7,.col-5{
+    width:100%;
+    margin:0;
+
+}
+div.slopeIcon{
+    margin:10px;
+}
+div.slopeIcon img{ /*to fit the image to rhe screen when the size of the screen is reduced*/
+    width:100%;
+   
+}
+
+
+/*section-5*/
+div.mobileStack{
+    width:50%;
+    display: block;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
